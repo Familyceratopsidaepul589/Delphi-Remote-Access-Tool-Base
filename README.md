@@ -8,12 +8,18 @@ This project is only intended to be a base for beginners to build on top of. It 
 
 ---
 
-![](/RemoteAdminDemo.gif)
+![](/images/RemoteAdminDemo.gif)
+
+![](/images/DefenderCheck.png)
+![](/images/Runtime.png)
+
+https://kleenscan.biz/scan_result/6ede6562dcd62d925ce21f782beeeabdaa7ba7bc3eaeda8ac0f2d30ecb2f0c8e
+![](/images/KS1.png)
+![](/images/KS2.png)
 
 https://www.virustotal.com/gui/file/f6cfc3b7f072b1116c9bfba0897cda638e1926da60d51c3905ec01e01cd6ec47/details
-
-![](/VT1.png)
-![](/VT2.png)
+![](/images/VT1.png)
+![](/images/VT2.png)
 
 ## Overview
 
